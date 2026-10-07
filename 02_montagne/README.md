@@ -2,7 +2,7 @@
 
 Objectif: mesurer le débit de lecture de la mémoire de votre machine en
 fonction de la taille des données et du pas d'accès, et en déduire la
-hiérarchie de caches. C'est la figure du cours (*memory mountain*, Bryant et
+hiérarchie de caches. C'est la figure du cours (_memory mountain_, Bryant et
 O'Hallaron), reproduite sur votre machine. Durée: 2 h. Rendu: `mountain.csv`,
 les figures, et les réponses dans `montagne.md`.
 
@@ -52,11 +52,11 @@ mesure la plus parlante sur ces machines.
 ## 3. Pour aller plus loin
 
 - Mesurez en écriture au lieu de la lecture. Que change le fait que
-  l'écriture doive d'abord charger la ligne (*write-allocate*)?
+  l'écriture doive d'abord charger la ligne (_write-allocate_)?
 - Lancez deux copies de `mountain` en même temps sur deux cœurs. Quels
   niveaux de la hiérarchie sont partagés?
-- Le préchargeur matériel (*prefetcher*) devine les accès réguliers.
+- Le préchargeur matériel (_prefetcher_) devine les accès réguliers.
   Remplacez l'accès avec un pas fixe par un parcours de liste chaînée dont
-  les éléments sont dans un ordre aléatoire (*pointer chasing*). Vous mesurez
+  les éléments sont dans un ordre aléatoire (_pointer chasing_). Vous mesurez
   alors la **latence** et non plus le débit: combien de nanosecondes pour un
   accès en L1, L2, L3, mémoire? Convertissez en cycles.
