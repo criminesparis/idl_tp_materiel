@@ -25,14 +25,16 @@ def ko(b):
 fig = plt.figure(figsize=(10, 7))
 ax = fig.add_subplot(111, projection="3d")
 S, T = np.meshgrid(np.log2(strides), np.log2(sizes))
-ax.plot_surface(S, T, Z / 1000, cmap="viridis", edgecolor="k", linewidth=0.3)
-ax.set_xlabel("pas (éléments de 8 octets)")
-ax.set_ylabel("taille")
+ax.plot_surface( T,S, Z / 1000, cmap="viridis", edgecolor="k", linewidth=0.3)
+ax.set_ylabel("pas (éléments de 8 octets)")
+ax.set_xlabel("taille")
 ax.set_zlabel("débit de lecture (Go/s)")
-ax.set_xticks(np.log2(strides)); ax.set_xticklabels(strides)
-ax.set_yticks(np.log2(sizes)[::2]); ax.set_yticklabels([ko(s) for s in sizes[::2]])
-ax.invert_yaxis()                   # petites tailles au fond: le sommet (L1) est derrière,
-ax.view_init(elev=25, azim=-45)     # la pente descend vers le lecteur, comme dans le livre
+ax.set_yticks(np.log2(strides)); ax.set_yticklabels(strides)
+ax.set_xticks(np.log2(sizes)[::2]); ax.set_xticklabels([ko(s) for s in sizes[::2]])
+ax.invert_xaxis()
+ax.invert_yaxis()
+
+ax.view_init(elev=25, azim=-135)
 plt.title("Montagne mémoire")
 plt.tight_layout()
 plt.savefig("mountain_3d.png", dpi=120)
