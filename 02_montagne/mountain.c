@@ -10,7 +10,7 @@
 #include <time.h>
 
 #define MINBYTES (1 << 13)          /* 8 Ko */
-#define MAXBYTES (1 << 28)          /* 256 Mo */
+#define MAXBYTES (1 << 25)          /* 256 Mo */
 #define MAXELEMS (MAXBYTES / sizeof(long))
 #define MINREAD  (256L << 20)       /* lire au moins 256 Mo par mesure */
 #define TRIALS   3                  /* on garde le meilleur essai */
