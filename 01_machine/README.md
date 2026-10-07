@@ -3,6 +3,7 @@
 Objectif: savoir ce qu'il y a dans votre ordinateur, et calculer sa
 puissance de calcul crête. Ce chiffre servira de référence aux deux TP
 suivants. Durée: 1 h. Rendu: le fichier `machine.md` complété.
+test
 
 ## 1. Inventaire
 
